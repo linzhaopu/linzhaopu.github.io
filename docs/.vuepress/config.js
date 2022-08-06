@@ -8,7 +8,7 @@ module.exports = {
     lang: 'zh-CN',
     title: '动力密码网络学院',
     description: '网络安全工程师|等保测评工程师|密码测评工程师|软件测试工程师|渗透测试|Linux 开发|Java开发|Web前端开发|',
-    // base: '/dolimima/',
+    //base: '',
     head: [
         ['link', {
             rel: 'icon',
@@ -33,12 +33,27 @@ module.exports = {
             {
                 text: '网络安全',
                 children: [{
-                    text: '网络安全工程师',
-                    link: '/webSafe/webSafeEngineer'
-                }, {
-                    text: '渗透测试工程师',
-                    link: '/webSafe/penetrationTestEngineer'
-                }]
+                        text: '网络安全工程师',
+                        link: '/webSafe/webSafeEngineer'
+                    }, {
+                        text: '渗透测试工程师',
+                        link: '/webSafe/penetrationTestEngineer'
+                    },
+                    {
+                        text: '注册信息安全工程师',
+                        children: [{
+                            text: 'CISP',
+                            link: '/webSafe/cisp'
+                        }, {
+                            text: 'CISSP',
+                            link: '/webSafe/cissp'
+                        }]
+                    }
+                ]
+            },
+            {
+                text: '网络工程',
+                link: '/webProject',
             },
             {
                 text: '等保密评',
@@ -54,10 +69,6 @@ module.exports = {
             {
                 text: '软件测试',
                 link: '/softwareTest',
-            },
-            {
-                text: '网络工程',
-                link: '/webProject',
             },
             {
                 text: 'Linux',
@@ -141,7 +152,9 @@ module.exports = {
                 children: ['/linux/readme.md'],
             }],
             '/webProject/': [{
-                children: ['/webProject/readme.md']
+                text: '基础篇',
+                collapsible: true,
+                children: ['/webProject/readme.md', '/webProject/tcpipModel.md']
             }]
         },
         displayAllHeaders: true,
