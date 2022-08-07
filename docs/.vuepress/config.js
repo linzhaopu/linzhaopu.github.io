@@ -149,7 +149,13 @@ module.exports = {
                 children: ['/softwareTest/readme.md'],
             }],
             '/linux/': [{
-                children: ['/linux/readme.md'],
+                text: 'Linux基本操作',
+                collapsible: true,
+                children: ['/linux/readme.md']
+            }, {
+                text: 'Linux运维命令整理总结',
+                collapsible: true,
+                children: ['/linux/linux.md']
             }],
             '/webProject/': [{
                 text: '基础篇',
